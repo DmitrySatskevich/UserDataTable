@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5841B53293CA70800525F47 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5841B52293CA70800525F47 /* InformationData.swift */; };
+		F5841B55293CA8C800525F47 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5841B54293CA8C800525F47 /* UsersTVC.swift */; };
+		F5841B57293CB68B00525F47 /* UserDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5841B56293CB68B00525F47 /* UserDataVC.swift */; };
+		F5841B59293CD8F400525F47 /* UserInformationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5841B58293CD8F400525F47 /* UserInformationTVC.swift */; };
 		F58881AA293CA4AB00088538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58881A9293CA4AB00088538 /* AppDelegate.swift */; };
 		F58881AC293CA4AB00088538 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58881AB293CA4AB00088538 /* SceneDelegate.swift */; };
-		F58881AE293CA4AB00088538 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58881AD293CA4AB00088538 /* ViewController.swift */; };
 		F58881B1293CA4AB00088538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58881AF293CA4AB00088538 /* Main.storyboard */; };
 		F58881B3293CA4AB00088538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58881B2293CA4AB00088538 /* Assets.xcassets */; };
 		F58881B6293CA4AB00088538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58881B4293CA4AB00088538 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5841B52293CA70800525F47 /* InformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
+		F5841B54293CA8C800525F47 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		F5841B56293CB68B00525F47 /* UserDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataVC.swift; sourceTree = "<group>"; };
+		F5841B58293CD8F400525F47 /* UserInformationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTVC.swift; sourceTree = "<group>"; };
 		F58881A6293CA4AB00088538 /* UserDataTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDataTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58881A9293CA4AB00088538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F58881AB293CA4AB00088538 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F58881AD293CA4AB00088538 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F58881B0293CA4AB00088538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F58881B2293CA4AB00088538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58881B5293CA4AB00088538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5841B4E293CA57E00525F47 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F58881AB293CA4AB00088538 /* SceneDelegate.swift */,
+				F58881A9293CA4AB00088538 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F5841B4F293CA5D900525F47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F58881AF293CA4AB00088538 /* Main.storyboard */,
+				F58881B4293CA4AB00088538 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5841B50293CA60A00525F47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5841B54293CA8C800525F47 /* UsersTVC.swift */,
+				F5841B56293CB68B00525F47 /* UserDataVC.swift */,
+				F5841B58293CD8F400525F47 /* UserInformationTVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5841B51293CA63F00525F47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5841B52293CA70800525F47 /* InformationData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F588819D293CA4AB00088538 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +98,11 @@
 		F58881A8293CA4AB00088538 /* UserDataTable */ = {
 			isa = PBXGroup;
 			children = (
-				F58881A9293CA4AB00088538 /* AppDelegate.swift */,
-				F58881AB293CA4AB00088538 /* SceneDelegate.swift */,
-				F58881AD293CA4AB00088538 /* ViewController.swift */,
-				F58881AF293CA4AB00088538 /* Main.storyboard */,
+				F5841B51293CA63F00525F47 /* Models */,
+				F5841B50293CA60A00525F47 /* Controllers */,
+				F5841B4F293CA5D900525F47 /* Views */,
 				F58881B2293CA4AB00088538 /* Assets.xcassets */,
-				F58881B4293CA4AB00088538 /* LaunchScreen.storyboard */,
+				F5841B4E293CA57E00525F47 /* AppDelegate */,
 				F58881B7293CA4AB00088538 /* Info.plist */,
 			);
 			path = UserDataTable;
@@ -138,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F58881AE293CA4AB00088538 /* ViewController.swift in Sources */,
+				F5841B55293CA8C800525F47 /* UsersTVC.swift in Sources */,
 				F58881AA293CA4AB00088538 /* AppDelegate.swift in Sources */,
+				F5841B53293CA70800525F47 /* InformationData.swift in Sources */,
 				F58881AC293CA4AB00088538 /* SceneDelegate.swift in Sources */,
+				F5841B57293CB68B00525F47 /* UserDataVC.swift in Sources */,
+				F5841B59293CD8F400525F47 /* UserInformationTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
