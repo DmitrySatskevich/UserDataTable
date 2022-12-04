@@ -8,30 +8,32 @@
 import UIKit
 
 class UserInformationTVC: UITableViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    let name = Person.name
-    let surname = Person.surname
-    let phone = Person.phone
-    let email = Person.email
-    
-    
+        title = "Список контактов"
+    }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return name.count
+        return Person.name.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let name = Person.name[indexPath.row]
+        let surname = Person.surname[indexPath.row]
+        cell.textLabel?.text = name + " " + surname
+        
+        let phone = Person.phone[indexPath.section]
+        let email = Person.email[indexPath.section]
+        cell.textLabel?.text = indexPath.row == 0 ? email : phone
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -65,16 +67,6 @@ class UserInformationTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 
