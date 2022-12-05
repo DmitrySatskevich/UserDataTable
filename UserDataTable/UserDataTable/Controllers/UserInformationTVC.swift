@@ -43,8 +43,8 @@ class UserInformationTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let phone = Person.phone[indexPath.section]
-        let email = Person.email[indexPath.section]
+        let phone = Person.phone[indexPath.row]
+        let email = Person.email[indexPath.row]
         cell.textLabel?.text = indexPath.row == 0 ? email : phone
         
         return cell
