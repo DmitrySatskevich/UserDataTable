@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F57878AC293E2FA500ECE244 /* SectionNameTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57878AB293E2FA500ECE244 /* SectionNameTVC.swift */; };
 		F5841B53293CA70800525F47 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5841B52293CA70800525F47 /* InformationData.swift */; };
 		F5841B55293CA8C800525F47 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5841B54293CA8C800525F47 /* UsersTVC.swift */; };
 		F5841B57293CB68B00525F47 /* UserDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5841B56293CB68B00525F47 /* UserDataVC.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F57878AB293E2FA500ECE244 /* SectionNameTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionNameTVC.swift; sourceTree = "<group>"; };
 		F5841B52293CA70800525F47 /* InformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
 		F5841B54293CA8C800525F47 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
 		F5841B56293CB68B00525F47 /* UserDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataVC.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				F5841B54293CA8C800525F47 /* UsersTVC.swift */,
 				F5841B56293CB68B00525F47 /* UserDataVC.swift */,
 				F5841B58293CD8F400525F47 /* UserInformationTVC.swift */,
+				F57878AB293E2FA500ECE244 /* SectionNameTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				F5841B55293CA8C800525F47 /* UsersTVC.swift in Sources */,
 				F58881AA293CA4AB00088538 /* AppDelegate.swift in Sources */,
 				F5841B53293CA70800525F47 /* InformationData.swift in Sources */,
+				F57878AC293E2FA500ECE244 /* SectionNameTVC.swift in Sources */,
 				F58881AC293CA4AB00088538 /* SceneDelegate.swift in Sources */,
 				F5841B57293CB68B00525F47 /* UserDataVC.swift in Sources */,
 				F5841B59293CD8F400525F47 /* UserInformationTVC.swift in Sources */,
