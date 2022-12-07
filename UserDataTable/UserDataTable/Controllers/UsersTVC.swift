@@ -8,37 +8,36 @@
 import UIKit
 
 class UsersTVC: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        title = "Список контактов"
+    
+    let persons = PersonData.createPersons().sorted { a, b -> Bool in
+        a.sureName < b.sureName
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Person.name.count
+        persons.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let name = Person.name[indexPath.row]
-        let surname = Person.surname[indexPath.row]
-        cell.textLabel?.text = name + " " + surname
-        
+        let person = persons[indexPath.row]
+        cell.textLabel?.text = person.name + " " + person.sureName
+        cell.detailTextLabel?.text = person.name
         return cell
     }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "Detail" {
+            return
+        }
+
         if let indexPath = tableView.indexPathForSelectedRow,
-           let destVC = segue.destination as? UserDataVC {
-            destVC.name = Person.name[indexPath.row]
-            destVC.surname = Person.surname[indexPath.row]
-            destVC.phone = Person.phone[indexPath.row]
-            destVC.email = Person.email[indexPath.row]
+           let detailVC = segue.destination as? UserDataVC
+        {
+            detailVC.person = persons[indexPath.row]
         }
     }
 }

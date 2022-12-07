@@ -9,16 +9,12 @@ import UIKit
 
 class UserInformationTVC: UITableViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        title = "Список контактов"
-    }
+    let persons = PersonData.createPersons().sorted { a, b -> Bool in a.name < b.name }
 
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return Person.name.count
+        persons.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,27 +22,49 @@ class UserInformationTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
+        let person = persons[section]
+
         let label = UILabel()
-        label.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        label.backgroundColor = .lightGray
+        label.text = person.name + " " + person.sureName
         label.textColor = .white
-        label.textAlignment = .left
+        label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 24)
-        
-        let name = Person.name[section]
-        let surname = Person.surname[section]
-        label.text = name + " " + surname
-        
+
         return label
     }
     
+      // Использование метода для кастомизации секции с использованием кастомного класса
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let SectionNameTVC = tableView.dequeueReusableCell(withIdentifier: "SectionNameTVC") as! SectionNameTVC
+//        let person = persons[section]
+//        SectionNameTVC.personLabel.text = person.name + " " + person.sureName
+//
+//        return SectionNameTVC
+//    }
+
+//    // Использование метода для кастомизации секции без использования кастомного класса
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        let person = persons[section]
+//
+//        let myView = UIView()
+//        myView.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+//
+//        let label = UILabel(frame: CGRect(x: 20, y: 3, width: 300, height: 20))
+//        label.text = person.name + " " + person.sureName
+//        label.textColor = .white
+//
+//        myView.addSubview(label)
+//        return myView
+//    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let phone = Person.phone[indexPath.section]
-        let email = Person.email[indexPath.section]
-        cell.textLabel?.text = indexPath.row == 0 ? email : phone
-        
+        print(indexPath)
+        let person = persons[indexPath.section]
+        cell.textLabel?.text = indexPath.row == 0 ? person.email : person.phoneNumber
         return cell
     }
 }
