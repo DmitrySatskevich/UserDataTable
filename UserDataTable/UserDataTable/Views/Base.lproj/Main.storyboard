@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="57F-f0-LFi" kind="show" id="f1j-EP-74B"/>
+                                    <segue destination="57F-f0-LFi" kind="show" identifier="Detail" id="f1j-EP-74B"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
